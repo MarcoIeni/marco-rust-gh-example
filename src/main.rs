@@ -1,3 +1,3 @@
 fn main() {
-    println!("Hello, world!");
+    marco_rust_gh_example::print_point();
 }
