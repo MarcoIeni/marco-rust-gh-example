@@ -2,5 +2,7 @@
 name = "marco-rust-gh-example"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "A simple example of a Rust project to showcase GitHub Settings and Actions"
 
 [dependencies]
