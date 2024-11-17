@@ -27,7 +27,9 @@ jobs:
       - name: Update Rust toolchain
         run: rustup update stable --no-self-update
       - name: Clippy
-        run: cargo clippy -- -D warnings
+        run: |
+          cargo clippy --all-targets --all-features \
+          --workspace -- -D warnings
 
   test:
     runs-on: ubuntu-24.04
