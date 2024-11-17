@@ -53,5 +53,4 @@ jobs:
           RUSTDOCFLAGS: -D warnings
         run: |
           cargo doc --no-deps --document-private-items \
-            --all-targets \
             --all-features --workspace --examples
