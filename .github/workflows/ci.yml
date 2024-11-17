@@ -10,5 +10,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Update Rust toolchain
+        run: rustup update stable --no-self-update
+      - name: Check formatting
+        run: cargo fmt --all --check
+
       - name: Check formatting
         run: cargo fmt -- --check
