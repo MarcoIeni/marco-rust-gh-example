@@ -1,7 +1,14 @@
-pub fn hello() {
-    let x = Some(5);
+#[derive(Debug)]
+pub struct Point {
+    x: i32,
+    y: i32,
+}
+
+/// Print a [`Point`] struct
+pub fn print_point() {
+    let x = Some(Point { x: 1, y: 2 });
     if let Some(x) = x {
-        println!("{x}")
+        println!("point {}, {}", x.x, x.y);
     }
 }
 
@@ -11,6 +18,6 @@ mod tests {
 
     #[test]
     fn test_hello() {
-        hello();
+        print_point();
     }
 }
