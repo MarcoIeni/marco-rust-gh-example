@@ -40,3 +40,18 @@ jobs:
         run: rustup update stable --no-self-update
       - name: Test
         run: cargo test
+
+  doc:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Update Rust toolchain
+        run: rustup update stable --no-self-update
+      - name: Check docs
+        env:
+          RUSTDOCFLAGS: -D warnings
+        run: |
+          cargo doc --no-deps --document-private-items \
+            --all-targets \
+            --all-features --workspace --examples
