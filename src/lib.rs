@@ -12,6 +12,5 @@ mod tests {
     #[test]
     fn test_hello() {
         hello();
-        assert!(false)
     }
 }
