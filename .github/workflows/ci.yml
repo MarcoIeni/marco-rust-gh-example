@@ -3,6 +3,10 @@ name: Continuous Integration
 on:
   pull_request:
 
+env:
+  CARGO_INCREMENTAL: 0
+  CARGO_TERM_COLOR: always
+
 jobs:
 
   fmt:
