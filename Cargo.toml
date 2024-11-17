@@ -6,3 +6,4 @@ license = "MIT"
 description = "A simple example of a Rust project to showcase GitHub Settings and Actions"
 
 [dependencies]
+tokio = "1.41.1"
