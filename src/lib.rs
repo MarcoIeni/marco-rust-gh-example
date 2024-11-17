@@ -4,3 +4,14 @@ pub fn hello() {
         println!("{x}")
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_hello() {
+        hello();
+        assert!(false)
+    }
+}
