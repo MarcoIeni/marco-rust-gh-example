@@ -4,7 +4,7 @@ pub struct Point {
     y: i32,
 }
 
-/// Print a [`Poin`] struct
+/// Print a [`Point`] struct
 pub fn print_point() {
     let x = Some(Point { x: 1, y: 2 });
     if let Some(x) = x {
