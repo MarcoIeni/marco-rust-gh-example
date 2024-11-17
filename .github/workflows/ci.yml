@@ -28,3 +28,13 @@ jobs:
         run: rustup update stable --no-self-update
       - name: Clippy
         run: cargo clippy -- -D warnings
+
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Update Rust toolchain
+        run: rustup update stable --no-self-update
+      - name: Test
+        run: cargo test
