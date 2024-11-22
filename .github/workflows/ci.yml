@@ -2,6 +2,7 @@ name: CI # Continuous Integration
 
 on:
   pull_request:
+  merge_group:
 
 env:
   CARGO_INCREMENTAL: 0
